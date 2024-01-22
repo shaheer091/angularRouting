@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { CanDeactivateFn } from '@angular/router';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -17,5 +16,4 @@ export class ContactComponent {
   onSubmit() {
     this.isSubmitted = true;
   }
-  
 }
