@@ -21,21 +21,6 @@ import { CourseService } from './Services/course.service';
 import { ServicesService } from './Services/services.service';
 import { UserService } from './Services/user.service';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // { path: '', redirectTo: 'Home', pathMatch: 'full' },
-  { path: 'Home', component: HomeComponent },
-  { path: 'About', component: AboutComponent },
-  { path: 'Contact', component: ContactComponent },
-  { path: 'Courses', component: CoursesComponent },
-  // { path: 'Courses/Course/:id', component: CourseDetailComponent },
-  {
-    path: 'Courses',
-    children: [{ path: 'Course/:id', component: CourseDetailComponent }],
-  },
-  { path: '**', component: NotFoundComponent },
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +38,7 @@ const routes: Routes = [
     TestimonyComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [CourseService, ServicesService, UserService],
   bootstrap: [AppComponent],
 })
