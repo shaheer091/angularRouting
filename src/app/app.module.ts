@@ -20,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CourseService } from './Services/course.service';
 import { ServicesService } from './Services/services.service';
 import { UserService } from './Services/user.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UserService } from './Services/user.service';
     ServicesComponent,
     TestimonyComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [CourseService, ServicesService, UserService],

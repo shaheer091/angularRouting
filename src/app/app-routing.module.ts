@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: 'Courses',
     children: [{ path: 'Course/:id', component: CourseDetailComponent }],
   },
+  { path: 'Login', component: LoginComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
