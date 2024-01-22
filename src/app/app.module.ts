@@ -21,6 +21,7 @@ import { CourseService } from './Services/course.service';
 import { ServicesService } from './Services/services.service';
 import { UserService } from './Services/user.service';
 import { LoginComponent } from './login/login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { LoginComponent } from './login/login.component';
     TestimonyComponent,
     NotFoundComponent,
     LoginComponent,
+    CheckoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [CourseService, ServicesService, UserService],
