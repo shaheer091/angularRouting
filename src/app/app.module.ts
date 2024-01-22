@@ -22,6 +22,7 @@ import { ServicesService } from './Services/services.service';
 import { UserService } from './Services/user.service';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     LoginComponent,
     CheckoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  exports: [],
   providers: [CourseService, ServicesService, UserService],
   bootstrap: [AppComponent],
 })

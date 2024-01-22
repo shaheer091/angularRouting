@@ -11,12 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { PopularComponent } from './home/popular/popular.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { canActivate, canActivateChild } from './auth.guard';
+import { canExit } from './contact/contact.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'About', component: AboutComponent },
-  { path: 'Contact', component: ContactComponent },
+  { path: 'Contact', component: ContactComponent, canDeactivate: [canExit] },
   { path: 'Courses', component: CoursesComponent },
   {
     path: 'Courses',
